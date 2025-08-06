@@ -28,10 +28,18 @@ const App = () => {
         import Estoque from "./pages/Estoque"
 
 <Route path="estoque" element={<Estoque />} />
-        <Route path="backlog" element={<div>Backlog</div>} />
-        <Route path="preventiva" element={<div>Planos Preventiva</div>} />
-        <Route path="pneus" element={<div>Pneus</div>} />
-        <Route path="oleo" element={<div>Análises de Óleo</div>} />
+        import Backlog from "./pages/Backlog"
+
+<Route path="backlog" element={<Backlog />} />
+        import Preventiva from "./pages/Preventiva"
+
+<Route path="preventiva" element={<Preventiva />} />
+        import Pneus from "./pages/Pneus"
+
+<Route path="pneus" element={<Pneus />} />
+        import AnalisesOleo from "./pages/Oleo"
+
+<Route path="oleo" element={<AnalisesOleo />} />
       </Route>
     </Routes>
   )

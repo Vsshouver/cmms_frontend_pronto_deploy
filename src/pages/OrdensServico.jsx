@@ -79,7 +79,7 @@ const OrdensServico = () => {
             <th>Status</th>
             <th>Equipamento</th>
             <th>Prioridade</th>
-            <th>Ações</th>
+            <th>Ações</th><th>Impressão</th>
           </tr>
         </thead>
         <tbody>
@@ -90,6 +90,11 @@ const OrdensServico = () => {
               <td>{o.status}</td>
               <td>{o.equipamento_id}</td>
               <td>{o.prioridade}</td>
+            <td>
+              <a href={`${API_BASE_URL}/impressao/ordem_servico/${o.id}/pdf`} target="_blank" rel="noopener noreferrer">
+                Ver PDF
+              </a>
+            </td>
               <td>
                 {o.status !== "FINALIZADA" && (
                   <button onClick={() => finalizarOS(o.id)}>Finalizar</button>
