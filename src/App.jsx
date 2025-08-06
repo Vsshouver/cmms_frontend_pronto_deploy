@@ -22,8 +22,12 @@ const App = () => {
         import Equipamentos from "./pages/Equipamentos"
 
 <Route path="equipamentos" element={<Equipamentos />} />
-        <Route path="ordens" element={<div>Ordens de Serviço</div>} />
-        <Route path="estoque" element={<div>Estoque</div>} />
+        import OrdensServico from "./pages/OrdensServico"
+
+<Route path="ordens" element={<OrdensServico />} />
+        import Estoque from "./pages/Estoque"
+
+<Route path="estoque" element={<Estoque />} />
         <Route path="backlog" element={<div>Backlog</div>} />
         <Route path="preventiva" element={<div>Planos Preventiva</div>} />
         <Route path="pneus" element={<div>Pneus</div>} />
