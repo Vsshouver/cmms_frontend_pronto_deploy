@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
+import API_BASE_URL from '../config/api'
 
 const Dashboard = () => {
   const [data, setData] = useState(null)
@@ -7,7 +8,7 @@ const Dashboard = () => {
   useEffect(() => {
     const fetchIndicators = async () => {
       const token = localStorage.getItem("token")
-      const response = await axios.get("https://cmmsbackendcompleto-production.up.railway.app/dashboard/indicadores", {
+      const response = await axios.get(`${API_BASE_URL}/dashboard/indicadores`, {
         headers: { Authorization: `Bearer ${token}` }
       })
       setData(response.data)
